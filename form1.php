@@ -2,8 +2,12 @@
 require 'includes/init.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $results = $_POST;
+  if(isset($_POST['num']) && $_POST['num']){
   var_dump($_POST['num']);
+}
+  if (isset($_POST['numbers']) && $_POST['numbers']) {
+   var_dump($_POST['numbers']);
+  }
 }
 ?>
 <?php require 'includes/header.php'; ?>
